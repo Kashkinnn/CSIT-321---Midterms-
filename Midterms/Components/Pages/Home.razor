@@ -53,14 +53,17 @@
             @if (_wonders.Count > 0)
             {
                 var cur = _wonders[_active];
-                <div @key="_active" class="fade-up glass-dark rounded-3xl p-5 md:p-7 grid md:grid-cols-12 gap-5 md:gap-8 items-center shadow-2xl">
+                <div @key="_active" class="fade-up glass-dark relative isolate overflow-hidden rounded-3xl p-5 md:p-7 grid md:grid-cols-12 gap-5 md:gap-8 items-center shadow-2xl">
+                    <div class="absolute inset-0 -z-10 bg-cover bg-center scale-125 blur-2xl opacity-70" style="background-image:url('@cur.Image')"></div>
+                    <div class="absolute inset-0 -z-10 bg-gradient-to-br from-black/20 to-black/50"></div>
+
                     <div class="md:col-span-3">
                         <p class="text-grad text-xs font-bold tracking-[0.25em] uppercase">@cur.Country</p>
                         <h2 class="text-2xl md:text-3xl font-extrabold tracking-tight mt-1">@cur.Name</h2>
                     </div>
-                    <p class="md:col-span-5 text-sm md:text-[15px] text-white/75 leading-relaxed">@cur.Description</p>
+                    <p class="md:col-span-5 text-sm md:text-[15px] text-white/85 leading-relaxed">@cur.Description</p>
                     <div class="md:col-span-4 flex items-center justify-between md:justify-end gap-5">
-                        <div class="text-xs text-white/60 space-y-1">
+                        <div class="text-xs text-white/70 space-y-1">
                             <p><span class="text-white font-semibold">Built</span> &nbsp;@cur.Built</p>
                             <p><span class="text-white font-semibold">Best time</span> &nbsp;@cur.BestTime</p>
                         </div>
