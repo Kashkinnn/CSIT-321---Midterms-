@@ -1,9 +1,13 @@
 # Wonders - Hospitality & Tourism Website
 
 **Course:** CSIT 321 - Application Development
+
 **Activity:** Midterm Exam
+
 **Name:** Joel C. Coyoca Jr.
+
 **Section:** F1
+
 **Figma:** https://www.figma.com/design/UD8l2nc67hsuLZzKPL5mVi/Wonders?node-id=0-1&t=DUvUOkCMM6BWErDJ-1
 ---
 
