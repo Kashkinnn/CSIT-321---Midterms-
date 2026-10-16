@@ -1,0 +1,73 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\L23X17W17\\Desktop\\CSIT 321 - Midterms\\Midterms\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\Midterms.bundle.scp.css",
+      "PackagePath": "staticwebassets\\Midterms.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\L23X17W17\\Desktop\\CSIT 321 - Midterms\\Midterms\\wwwroot\\app.css",
+      "PackagePath": "staticwebassets\\app.css"
+    },
+    {
+      "Id": "C:\\Users\\L23X17W17\\Desktop\\CSIT 321 - Midterms\\Midterms\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\L23X17W17\\Desktop\\CSIT 321 - Midterms\\Midterms\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\L23X17W17\\Desktop\\CSIT 321 - Midterms\\Midterms\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\Users\\L23X17W17\\Desktop\\CSIT 321 - Midterms\\Midterms\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "C:\\Users\\L23X17W17\\Desktop\\CSIT 321 - Midterms\\Midterms\\wwwroot\\images\\.gitkeep",
+      "PackagePath": "staticwebassets\\images\\.gitkeep"
+    },
+    {
+      "Id": "C:\\Users\\L23X17W17\\Desktop\\CSIT 321 - Midterms\\Midterms\\wwwroot\\images\\chichen-itza.png",
+      "PackagePath": "staticwebassets\\images\\chichen-itza.png"
+    },
+    {
+      "Id": "C:\\Users\\L23X17W17\\Desktop\\CSIT 321 - Midterms\\Midterms\\wwwroot\\images\\great-wall.jpg",
+      "PackagePath": "staticwebassets\\images\\great-wall.jpg"
+    },
+    {
+      "Id": "C:\\Users\\L23X17W17\\Desktop\\CSIT 321 - Midterms\\Midterms\\wwwroot\\images\\machu-picchu.jpg",
+      "PackagePath": "staticwebassets\\images\\machu-picchu.jpg"
+    },
+    {
+      "Id": "C:\\Users\\L23X17W17\\Desktop\\CSIT 321 - Midterms\\Midterms\\wwwroot\\images\\petra.jpg",
+      "PackagePath": "staticwebassets\\images\\petra.jpg"
+    },
+    {
+      "Id": "C:\\Users\\L23X17W17\\Desktop\\CSIT 321 - Midterms\\Midterms\\wwwroot\\images\\taj-mahal.jpg",
+      "PackagePath": "staticwebassets\\images\\taj-mahal.jpg"
+    },
+    {
+      "Id": "C:\\Users\\L23X17W17\\Desktop\\CSIT 321 - Midterms\\Midterms\\wwwroot\\js\\wonders.js",
+      "PackagePath": "staticwebassets\\js\\wonders.js"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Midterms.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.Midterms.props",
+      "PackagePath": "build\\Midterms.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.Midterms.props",
+      "PackagePath": "buildMultiTargeting\\Midterms.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.Midterms.props",
+      "PackagePath": "buildTransitive\\Midterms.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

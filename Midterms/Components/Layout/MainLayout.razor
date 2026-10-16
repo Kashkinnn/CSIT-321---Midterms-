@@ -1,23 +1,61 @@
-﻿@inherits LayoutComponentBase
+@inherits LayoutComponentBase
+@implements IDisposable
+@inject NavigationManager Nav
+@inject IJSRuntime JS
 
-<div class="page">
-    <div class="sidebar">
-        <NavMenu />
+<header class="fixed top-4 inset-x-0 z-50 px-4">
+    <div class="max-w-5xl mx-auto glass-dark rounded-full pl-6 pr-2 py-2 flex items-center justify-between shadow-2xl shadow-black/40">
+        <a href="/" class="flex items-center gap-2 text-lg font-extrabold tracking-tight">
+            <span class="w-2.5 h-2.5 rounded-full bg-gradient-to-br from-amber-300 to-rose-500"></span>
+            Wonders
+        </a>
+        <nav id="nav-wrap" class="nav-wrap">
+            <span id="nav-pill" class="nav-pill"></span>
+            <NavLink href="/" Match="NavLinkMatch.All" class="nav-link" ActiveClass="nav-active">Explore</NavLink>
+            <NavLink href="book" class="nav-link" ActiveClass="nav-active">Book a Tour</NavLink>
+            <NavLink href="about" class="nav-link" ActiveClass="nav-active">About</NavLink>
+        </nav>
     </div>
+</header>
 
-    <main>
-        <div class="top-row px-4">
-            <a href="https://learn.microsoft.com/aspnet/core/" target="_blank">About</a>
+<main>
+    @Body
+</main>
+
+<footer class="border-t border-white/10 mt-10">
+    <div class="max-w-6xl mx-auto px-6 py-12 grid md:grid-cols-3 gap-8 text-sm">
+        <div>
+            <p class="text-xl font-extrabold flex items-center gap-2">
+                <span class="w-2.5 h-2.5 rounded-full bg-gradient-to-br from-amber-300 to-rose-500"></span>Wonders
+            </p>
+            <p class="text-white/50 mt-3 max-w-xs">Guided journeys to the world's most iconic landmarks. Small groups, local experts.</p>
         </div>
+        <div class="space-y-2">
+            <p class="text-white/40 uppercase tracking-widest text-xs mb-3">Navigate</p>
+            <a href="/" class="block text-white/70 hover:text-white">Explore</a>
+            <a href="book" class="block text-white/70 hover:text-white">Book a Tour</a>
+            <a href="about" class="block text-white/70 hover:text-white">About &amp; Contact</a>
+        </div>
+        <div class="space-y-2">
+            <p class="text-white/40 uppercase tracking-widest text-xs mb-3">Contact</p>
+            <p class="text-white/70">hello@wonders-tours.com</p>
+            <p class="text-white/70">+63 900 000 0000</p>
+            <p class="text-white/70">Cebu City, Philippines</p>
+        </div>
+    </div>
+    <div class="border-t border-white/5 py-5 text-center text-xs text-white/35">
+        &copy; @DateTime.Now.Year Wonders Tours. All rights reserved.
+    </div>
+</footer>
 
-        <article class="content px-4">
-            @Body
-        </article>
-    </main>
-</div>
+@code {
+    protected override void OnInitialized() => Nav.LocationChanged += OnLocationChanged;
 
-<div id="blazor-error-ui">
-    An unhandled error has occurred.
-    <a href="" class="reload">Reload</a>
-    <a class="dismiss">🗙</a>
-</div>
+    private void OnLocationChanged(object? sender, LocationChangedEventArgs e) =>
+        InvokeAsync(StateHasChanged);
+
+    protected override async Task OnAfterRenderAsync(bool firstRender) =>
+        await JS.InvokeVoidAsync("navPill.update", firstRender);
+
+    public void Dispose() => Nav.LocationChanged -= OnLocationChanged;
+}
